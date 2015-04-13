@@ -1,5 +1,6 @@
 
-![The Angulists - For Duty and Humanity](design/angulist-logo.png)
+
+<img align="center" src="design/angulist-logo.png" alt="The Angulists - For Duty and Humanity">
 
 #The Angulists: Apprentice Group Project #2
 
