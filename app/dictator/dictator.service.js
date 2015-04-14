@@ -1,8 +1,12 @@
 (function(){
   angular
-    .module('dictator.services', []).
+    .module('dictator')
+    .service('dictatorService', dictatorService);
 
-
+    function dictatorService() {
+      this.testV = "YOYOYO";
+      // return this.testV;
+    }; 
 })();
 
 //what do i need this service to do?

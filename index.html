@@ -16,7 +16,9 @@
   </head>
   
 <body ng-app="dictator" ng-controller="LayoutController as vmLayout">
-  <div ng-view></div> 
+  <div ng-controller="DictatorController as vmDictator">
+    <div ng-view></div> 
+  </div>
 
   <!-- Dictactor App -->
   <script src="./app/dictator.app.js"></script>

@@ -14,6 +14,6 @@
         factory.curIndex = 0;
 
         return factory;
-    }
+    };
 
 })();

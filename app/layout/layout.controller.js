@@ -5,6 +5,6 @@
 
 		function Controller($location, DictatorFactory){
 			
-		}
+		};
 
 })();
