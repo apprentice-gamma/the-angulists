@@ -13,10 +13,8 @@
 				DictatorFactory.getDictator()
 					.success(function(data){
 						vm.dictators = data;
-					})
-					.error(function(){
-						vm.dictators = data;
-				});
+						console.log(vm.dictators);
+					});
 			}
 		}
 
