@@ -3,4 +3,4 @@
 
 ###Dependencies
 
-We are using the (UI Bootstrap framework)[http://angular-ui.github.io/bootstrap/].
+We are using the [UI Bootstrap framework](http://angular-ui.github.io/bootstrap/).
