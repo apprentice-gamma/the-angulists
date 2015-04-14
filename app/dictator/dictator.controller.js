@@ -1,0 +1,1 @@
+dictator.controller.js
