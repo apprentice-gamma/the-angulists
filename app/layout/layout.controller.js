@@ -4,17 +4,7 @@
 		.controller('LayoutController', Controller);
 
 		function Controller($location, DictatorFactory){
-			var vm = this;
-			vm.dictators = [];
-			getDictator();
-
-			function getDictator(){
-				DictatorFactory.getDictator()
-					.success(function(data){
-						vm.dictators = data;
-						console.log(vm.dictators);
-					});
-			}
+			
 		}
 
 })();

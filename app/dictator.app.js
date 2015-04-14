@@ -2,12 +2,18 @@ angular.module('dictator', ['ngRoute', 'ui.bootstrap']);
 angular.module('dictator').config(Configuration);
 
 function Configuration($routeProvider){
-	var home = '/';
+	var root = '/';
 	$routeProvider
-		.when(home, {
-			templateUrl: 'templates/view-home.html',
+		.when(root, {
+			templateUrl: 'templates/view-root.html',
 		})
+    .when('/result', {
+      templateUrl: 'templates/view-result.html',
+    })
+    .when('/add', {
+      templateUrl: 'templates/view-add.html',
+    })
 		.otherwise({
-			redirectTo: home,
+			redirectTo: root,
 		});
 }
