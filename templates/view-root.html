@@ -1,14 +1,15 @@
+<div class="main-message">
+	<p>Your guess count is: {{vmDictator.guessCount}}</p>
+	<p>{{vmDictator.message}}</p>
 
-<p>Your guess count is: {{vmDictator.guessCount}}</p>
-<p>{{vmDictator.message}}</p>
+	<span class="guess-button" ng-click="vmDictator.guessCounter()">Take a guess</span>
+</div>
 
-<span class="guess-button" ng-click="vmDictator.guessCounter()">Take a guess</span>
+<div class="dictator-list">
+	{{vmDictator.dictatorsAndHairType}} <br>
+	{{vmDictator.dictatorsAtWarAndHairType}} <br>
+	{{vmDictator.hairCount}} <br>
+	{{vmDictator.winner}} <br>
+	{{vmDictator.winnerDictators}}
+</div>
 
-
-
-
-{{vmDictator.dictatorsAndHairType}} <br>
-{{vmDictator.dictatorsAtWarAndHairType}} <br>
-{{vmDictator.hairCount}} <br>
-{{vmDictator.winner}} <br>
-{{vmDictator.winnerDictators}}
