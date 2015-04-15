@@ -10,7 +10,7 @@
       vm.dictatorsAtWarAndHairType = {};
       vm.hairCount = {};
       vm.winner;
-      // vm.winnerDictators
+      vm.winnerDictators = [];
 
       getDictator();
 
@@ -53,9 +53,12 @@
       }
 
       function listDictatorsWithWinningHairType() {
-
+        for (var dictator in vm.dictatorsAndHairType) {
+          if (vm.dictatorsAndHairType.hasOwnProperty(dictator) && vm.dictatorsAndHairType[dictator] === vm.winner) {
+            vm.winnerDictators.push(dictator);
+          }
+        }
       }
-
 
     };
 
