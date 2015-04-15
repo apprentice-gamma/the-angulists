@@ -3,18 +3,14 @@
 		.module('dictator')
 		.controller('LayoutController', Controller);
 
-		function Controller($location, DictatorFactory){
-			var vm = this;
-			vm.dictators = [];
-			getDictator();
+    function Controller($location, DictatorFactory) {
+        var vm = this;
+        vm.title = 'Layout Controller';
+        vm.returnToHome = returnToHome;
 
-			function getDictator(){
-				DictatorFactory.getDictator()
-					.success(function(data){
-						vm.dictators = data;
-						console.log(vm.dictators);
-					});
-			}
-		}
+        function returnToHome() {
+            $location.url('/');
+        }
+    }
 
 })();
