@@ -4,8 +4,6 @@
     .service('dictatorService', dictatorService);
 
     function dictatorService() {
-      this.testV = "YOYOYO";
-
     }; 
 })();
 

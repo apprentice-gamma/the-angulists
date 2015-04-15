@@ -6,16 +6,27 @@
     function DictatorController($location, DictatorFactory, dictatorService){
       var vm = this;
       vm.dictators = [];
-      console.log(dictatorService.testV);
+      vm.hairtypes = [];
 
       getDictator();
 
-      function getDictator(){
+      function getDictator() {
         DictatorFactory.getDictator()
           .success(function(data){
             vm.dictators = data;
+            getHairTypes();             //you couldn't call this on line 12 (right after getDictator() because it's asynchronous)
           });
       }
+
+      function getHairTypes() {
+        console.log(vm.dictators.length);
+        for (var i=0; i<=vm.dictators.length; i++) {
+          vm.hairtypes.push(vm.dictators[i]["facial_hair"])
+        }
+      }
+
+
+
     };
 
 })();
