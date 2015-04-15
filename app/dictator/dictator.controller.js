@@ -6,6 +6,7 @@
     function DictatorController($location, DictatorFactory, dictatorService){
       var vm = this;
       vm.dictators = [];
+
       console.log(dictatorService.testV);
 
       getDictator();
@@ -17,6 +18,7 @@
           });
       }
     };
+
 
 })();
 
