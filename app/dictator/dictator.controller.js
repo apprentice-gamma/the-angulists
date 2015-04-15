@@ -6,7 +6,6 @@
     function DictatorController($location, DictatorFactory, dictatorService){
       var vm = this;
       vm.dictators = [];
-      console.log("YO");
       console.log(dictatorService.testV);
 
       getDictator();
@@ -15,7 +14,6 @@
         DictatorFactory.getDictator()
           .success(function(data){
             vm.dictators = data;
-            console.log(vm.dictators);
           });
       }
     };

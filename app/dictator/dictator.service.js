@@ -3,9 +3,9 @@
     .module('dictator')
     .service('dictatorService', dictatorService);
 
-    function dictatorService() {
+    function dictatorService(DictatorController) {
       this.testV = "YOYOYO";
-      // return this.testV;
+
     }; 
 })();
 
