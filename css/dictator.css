@@ -1,0 +1,10 @@
+.container {
+	width: 100%;
+	max-width: 500px;
+	padding: 50px 0;
+	margin: auto;
+}
+.guess-button {
+	background-color: green;
+	padding: 10px;
+}

@@ -15,5 +15,6 @@ function Configuration($routeProvider){
     })
 		.otherwise({
 			redirectTo: root,
-		});
+	});
 }
+
