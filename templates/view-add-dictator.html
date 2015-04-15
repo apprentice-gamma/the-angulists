@@ -1,4 +1,32 @@
-<p>You are on the add page</p>
+<h3>Add Dictator</h3>
+<form name="addDictator" role="form" ng-submit="vmListing.addDictator(vmListing.newDictator)" novalidate>
+	<div class="form-group">
+		<input type="text" class="form-control input" id="inputDictatorName" ng-model="vmListing.newDictator.name" placeholder="Dictator Name (required)" name="name" required/>
+		<h5 class='text-danger' ng-show="addDictator.name.$invalid && addDictator.name.$dirty">Please enter the dictator's name.</h5>
+	</div>
+	<div class="form-group">
+		<input type="text" class="form-control input" id="inputHairType" ng-model="vmListing.newDictator.facialHairType" placeholder="Facial Hair Type (required)" name="facialHairType" required/>
+		<h5 class='text-danger' ng-show="addDictator.facialHairType.$invalid && addDictator.facialHairType.$dirty">Please enter the dictator's facial hair type.</h5>
+	</div>
+	<div class="form-group">
+		Is this dictator at war?<br/>
+		<label>
+			<input type="radio" value="true" id="atWar" ng-model="vmListing.newDictator.atWar" name="atWar" required/>
+			Yes
+		<label><br/>
+		</label>
+			<input type="radio" value="false" id="atWar" ng-model="vmListing.newDictator.atWar" name="atWar" required/>
+			No
+			<h5 class='text-danger' ng-show="addDictator.atWar.$invalid && addDictator.atWar.$dirty">Is this dictator at war?</h5>
+		</label>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-12">
+			<button class="btn btn-success pull-right" type="submit" ng-disabled="addDictator.$invalid" ng-click="addDictator.$setPristine()">Add</button>
+		</div>
+		<p>{{vmListing.status}}</p>
+	</div>
+</form>
 
 {{vmDictator.dictators}}
 
