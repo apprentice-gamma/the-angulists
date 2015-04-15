@@ -6,7 +6,8 @@
     function DictatorController($location, DictatorFactory, dictatorService){
       var vm = this;
       vm.dictators = [];
-      vm.hairDistribution = {};
+      vm.dictatorsAndHairType = {};
+      vm.dictatorsAtWarAndHairType = {};
       vm.hairCount = {};
       vm.winner = {};
       vm.message = '';
@@ -26,6 +27,8 @@
         vm.message = vm.messages.failedToGuess;
       };
 
+      vm.winner;
+      vm.winnerDictators = [];
 
       getDictator();
 
@@ -39,13 +42,16 @@
 
       function setupHairCount() {
         for (var i=0; i<vm.dictators.length; i++) {
-          vm.hairDistribution[vm.dictators[i]["dictator_name"]] = vm.dictators[i]["facial_hair"];
+          vm.dictatorsAndHairType[vm.dictators[i]["dictator_name"]] = vm.dictators[i]["facial_hair"];
+          if (vm.dictators[i]["at_war"] === true) {
+            vm.dictatorsAtWarAndHairType[vm.dictators[i]["dictator_name"]] = vm.dictators[i]["facial_hair"];
+          }
         }
-        for (var dictator_name in vm.hairDistribution) {
-          if (vm.hairDistribution.hasOwnProperty(dictator_name) && !vm.hairCount.hasOwnProperty(vm.hairDistribution[dictator_name])) {
-            vm.hairCount[vm.hairDistribution[dictator_name]] = 1;
-          } else if (vm.hairDistribution.hasOwnProperty(dictator_name) && vm.hairCount.hasOwnProperty(vm.hairDistribution[dictator_name])) {
-            vm.hairCount[vm.hairDistribution[dictator_name]] += 1;
+        for (var dictator_name in vm.dictatorsAtWarAndHairType) {
+          if (vm.dictatorsAtWarAndHairType.hasOwnProperty(dictator_name) && !vm.hairCount.hasOwnProperty(vm.dictatorsAtWarAndHairType[dictator_name])) {
+            vm.hairCount[vm.dictatorsAtWarAndHairType[dictator_name]] = 1;
+          } else if (vm.dictatorsAtWarAndHairType.hasOwnProperty(dictator_name) && vm.hairCount.hasOwnProperty(vm.dictatorsAtWarAndHairType[dictator_name])) {
+            vm.hairCount[vm.dictatorsAtWarAndHairType[dictator_name]] += 1;
           }
         }
         determineWinner();
@@ -61,8 +67,19 @@
           }
         }
         vm.winner = winner;
+        listDictatorsWithWinningHairType();
       }
+
+      function listDictatorsWithWinningHairType() {
+        for (var dictator in vm.dictatorsAndHairType) {
+          if (vm.dictatorsAndHairType.hasOwnProperty(dictator) && vm.dictatorsAndHairType[dictator] === vm.winner) {
+            vm.winnerDictators.push(dictator);
+          }
+        }
+      }
+
     };
+
 
 })();
 
