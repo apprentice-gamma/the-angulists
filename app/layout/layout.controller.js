@@ -4,9 +4,8 @@
 		.controller('LayoutController', Controller);
 
     function Controller($location, DictatorFactory) {
-        var vm = this;
-        vm.title = 'Layout Controller';
-        
+      var vm = this;
+      vm.title = 'Layout Controller';
     };
 
 })();
