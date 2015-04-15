@@ -11,7 +11,7 @@ function Configuration($routeProvider){
       templateUrl: 'templates/view-result.html',
     })
     .when('/add', {
-      templateUrl: 'templates/view-add.html',
+      templateUrl: 'templates/view-add-dictator.html',
     })
 		.otherwise({
 			redirectTo: root,
