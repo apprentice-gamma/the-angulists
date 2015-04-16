@@ -38,11 +38,16 @@
 
         function setupHairCount() {
           for (var i=0; i<factory.dictators.length; i++) {
-            factory.hairtypes.push(factory.dictators[i]["facial_hair"]);
             factory.dictatorsAndHairType[factory.dictators[i]["dictator_name"]] = factory.dictators[i]["facial_hair"];
             if (factory.dictators[i]["at_war"] === true) {
               factory.dictatorsAtWarAndHairType[factory.dictators[i]["dictator_name"]] = factory.dictators[i]["facial_hair"];
             }
+          }
+          for (var dictatorName in factory.dictatorsAndHairType) {
+            
+            // if (factory.dictatorsAndHairType(dictatorName) && factory.hairtypes.includes(factory.dictatorsAndHairType[dictatorName]) === false) {
+            //   factory.hairtypes.push(factory.dictatorsAndHairType[dictatorName]);
+            // }
           }
           for (var dictator_name in factory.dictatorsAtWarAndHairType) {
             if (factory.dictatorsAtWarAndHairType.hasOwnProperty(dictator_name) && !factory.hairCount.hasOwnProperty(factory.dictatorsAtWarAndHairType[dictator_name])) {
