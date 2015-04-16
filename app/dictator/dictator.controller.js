@@ -3,15 +3,18 @@
     .module('dictator')
     .controller('DictatorController', DictatorController);
 
-    function DictatorController($location, DictatorFactory, dictatorService){
+    function DictatorController($location, DictatorFactory){
       var vm = this;
-      vm.dictators = DictatorFactory.dictators;
-      vm.hairtypes = DictatorFactory.hairtypes;
-      vm.dictatorsAndHairType = DictatorFactory.dictatorsAndHairType;
-      vm.dictatorsAtWarAndHairType = DictatorFactory.dictatorsAtWarAndHairType;
-      vm.hairCount = DictatorFactory.hairCount;
-      vm.winner = DictatorFactory.winningHairType;
-      vm.winnerDictators = DictatorFactory.winnerDictators;
+
+      vm.DictatorFactory = DictatorFactory; 
+      // vm.hairtypes = DictatorFactory.hairtypes;
+      // vm.dictatorsAndHairType = DictatorFactory.dictatorsAndHairType;
+      // vm.dictatorsAtWarAndHairType = DictatorFactory.dictatorsAtWarAndHairType;
+      // vm.hairCount = DictatorFactory.hairCount;
+      // vm.winningHairType = DictatorFactory.winningHairType;
+      // vm.winnerDictators = DictatorFactory.winnerDictators;
+
+      //understand the above later
 
 
       vm.message = '';

@@ -11,21 +11,22 @@
         factory.dictatorsAndHairType = {};
         factory.dictatorsAtWarAndHairType = {};
         factory.hairCount = {};
-        factory.winningHairType;
+        factory.winningHairType = "";
         factory.winnerDictators = [];
 
         var url = 'http://project2-backend.herokuapp.com/api/dictators';
 
         factory.getDictator = function() {
-            return $http.get(url).success(function(data) {
+            $http.get(url).success(function(data) {
               factory.dictators = data;
+              console.log("In the factory, getDictator: " + factory.dictators);
               setupHairCount();
               determineWinner();
               listDictatorsWithWinningHairType();
             });
         };
         factory.addDictator = function(dictator) {
-            return $http.post(url, dictator);
+            $http.post(url, dictator);
         };
         factory.curIndex = 0;
 
