@@ -3,8 +3,9 @@
     .module('dictator')
     .controller('DictatorController', DictatorController);
 
-    function DictatorController($location, DictatorFactory){
+    function DictatorController($location, DictatorFactory) {
       var vm = this;
+      vm.addDictator = addDictator;
 
       vm.DictatorFactory = DictatorFactory; 
       // vm.hairtypes = DictatorFactory.hairtypes;
@@ -27,7 +28,8 @@
           vm.guessCount++;
         } else {
           vm.failedToGuess();
-        }};
+        }
+      };
       vm.failedToGuess = function(){
         vm.guessCount = 0;
         vm.message = vm.messages.failedToGuess;
@@ -37,6 +39,17 @@
       getDictator();
 
       function getDictator() { DictatorFactory.getDictator() };
+
+      function addDictator(dictator) { 
+        if (dictator.hasOwnProperty("at_war")) {
+          console.log(dictator);
+          DictatorFactory.addDictator(dictator);
+        } else {
+          dictator.at_war = true;
+          console.log(dictator);
+          DictatorFactory.addDictator(dictator); 
+        }
+      };
 
     };
 
