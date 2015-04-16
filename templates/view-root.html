@@ -1,8 +1,24 @@
-<p>You are on the root page</p>
+<div class="main-message">
+	<p>Your guess count is: {{vmDictator.guessCount}}</p>
+	<p>{{vmDictator.message}}</p>
 
+	<span class="guess-button" ng-click="vmDictator.guessCounter()">Take a guess</span>
+</div>
+
+<div class="dictator-list">
+	{{vmDictator.dictatorsAndHairType}} <br>
+	{{vmDictator.dictatorsAtWarAndHairType}} <br>
+	{{vmDictator.hairCount}} <br>
+	{{vmDictator.winner}} <br>
+	{{vmDictator.winnerDictators}}
+</div>
+
+<<<<<<< HEAD
 {{vmDictator.hairtypes}} <br>
 {{vmDictator.dictatorsAndHairType}} <br>
 {{vmDictator.dictatorsAtWarAndHairType}} <br>
 {{vmDictator.hairCount}} <br>
 {{vmDictator.winningHairType}} <br>
 {{vmDictator.winnerDictators}}
+=======
+>>>>>>> 0238542e098cd9b0e243387ef51e10b0ea6771ae

@@ -13,11 +13,31 @@
       vm.winner = DictatorFactory.winningHairType;
       vm.winnerDictators = DictatorFactory.winnerDictators;
 
+
+      vm.message = '';
+      vm.messages = {
+        failedToGuess: 'You have exceeded your allowed guesses. Here is the answer:'
+      };
+      vm.guessCount = 0;
+      vm.guessCounter = function(){
+        vm.message = '';
+        if(vm.guessCount < 2){
+          vm.guessCount++;
+        } else {
+          vm.failedToGuess();
+        }};
+      vm.failedToGuess = function(){
+        vm.guessCount = 0;
+        vm.message = vm.messages.failedToGuess;
+      };
+
+
       getDictator();
 
       function getDictator() { DictatorFactory.getDictator() };
 
     };
+
 
 })();
 
