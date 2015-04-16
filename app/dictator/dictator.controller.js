@@ -44,12 +44,22 @@
         if (dictator.hasOwnProperty("at_war")) {
           console.log(dictator);
           DictatorFactory.addDictator(dictator);
+          $location.path('/');
         } else {
           dictator.at_war = true;
           console.log(dictator);
           DictatorFactory.addDictator(dictator); 
+          $location.path('/');
         }
       };
+
+      function goToAddDictator() {
+        $location.path('/add');
+      }
+
+      function checkUserChoice() {
+
+      }
 
     };
 
