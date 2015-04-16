@@ -29,6 +29,7 @@
             console.log(dictator);
             $http.post(url, dictator).success(function() {
               factory.dictators.push(dictator);
+              console.log("Dictator Added!");
             });
         };
         factory.curIndex = 0;
