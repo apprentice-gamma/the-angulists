@@ -14,13 +14,11 @@
         factory.winningHairType;
         factory.winnerDictators = [];
 
-        var url = './json/demo-data.json';
+        var url = 'http://project2-backend.herokuapp.com/api/dictators';
 
         factory.getDictator = function() {
             return $http.get(url).success(function(data) {
               factory.dictators = data;
-              console.log(factory.dictators);
-              console.log("yoyo");
               setupHairCount();
               determineWinner();
               listDictatorsWithWinningHairType();
