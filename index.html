@@ -12,15 +12,11 @@
 
     <!-- Modules -->
     <script src="./app/modules/ui-bootstrap-tpls-0.12.1.min.js"></script>
+    
+
   </head>
 
-<body ng-app="dictator">
-  <div ng-controller="LayoutController as vmLayout">
-    {{vmLayout.title}}
-  </div>
-  <div class="fht-list" ng-controller="FacialHairTypeController as vmHairType">
-    {{vmHairType.hairTypes}}
-  </div>
+<body ng-app="dictator" ng-controller="LayoutController as vmLayout">
   <div class="container" ng-controller="DictatorController as vmDictator">
     <div ng-view></div> 
   </div>
@@ -29,8 +25,6 @@
   <script src="./app/dictator.app.js"></script>
   <script src="./app/dictator.factory.js"></script>   
   <script src="./app/dictator/dictator.controller.js"></script>
-  <script src="./app/dictator/facial-hair-type.controller.js"></script>
   <script src="./app/layout/layout.controller.js"></script>
-
 </body>
 </html>
