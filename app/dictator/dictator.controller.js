@@ -16,7 +16,6 @@
 
       //understand the above later
 
-
       vm.message = '';
       vm.messages = {
         failedToGuess: 'You have exceeded your allowed guesses. Here is the answer:'
