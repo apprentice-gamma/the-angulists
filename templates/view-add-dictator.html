@@ -1,36 +1,45 @@
-
-<h3>Add Dictator</h3>
-<form name="addDictator" role="form" ng-submit="vmDictator.addDictator(vmDictator.newDictator)" novalidate>
-	<div class="form-group">
-		<label>* Dictator Name:
-		<input type="text" class="form-control input" id="inputDictatorName" ng-model="vmDictator.newDictator.dictator_name" name="name" required/>
-		<h5 class='text-danger' ng-show="addDictator.dictator_name.$invalid && addDictator.dictator_name.$dirty">Please enter the dictator's name.</h5>
-		</label>
-	</div>
-	<div class="form-group">
-		<label>* Facial Hair Type:
-		<input type="text" class="form-control input" id="inputHairType" ng-model="vmDictator.newDictator.facial_hair" name="facialHairType" required/>
-		<h5 class='text-danger' ng-show="addDictator.facial_hair.$invalid && addDictator.facial_hair.$dirty">Please enter the dictator's facial hair type.</h5>
-		</label>
-	</div>
-	<div class="form-group">
-		Is this dictator at war?<br/>
-		<label>
-			<input type="radio" ng-value="true" id="atWar" ng-model="vmDictator.newDictator.at_war" name="atWar"/>
-			Yes
-		<label><br/>
-		</label>
-			<input type="radio" ng-value="false" id="atWar" ng-model="vmDictator.newDictator.at_war" name="atWar"/>
-			No
-			<h5 class='text-danger' ng-show="addDictator.atWar.$invalid && addDictator.atWar.$dirty">Is this dictator at war?</h5>
-		</label><br/>
-		<p>* = Required field.</p>
-	</div>
-	<div class="form-group">
-		<div class="col-sm-12">
-			<button class="btn btn-success pull-right" type="submit" ng-disabled="addDictator.$invalid" ng-click="addDictator">Add</button>
-		</div>
-		<p>{{vmDictator.status}}</p>
-	</div>
-</form>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-4">
+          <h3>Add Dictator</h3>
+          <form name="addDictator" role="form" ng-submit="vmDictator.addDictator(vmDictator.newDictator)" novalidate>
+          	<div class="form-group">
+          		<label>* Dictator Name:
+          		<input type="text" class="form-control input-lg" id="inputDictatorName" ng-model="vmDictator.newDictator.dictator_name" name="name" required/>
+          		<h5 class='text-danger' ng-show="addDictator.dictator_name.$invalid && addDictator.dictator_name.$dirty">Please enter the dictator's name.</h5>
+          		</label>
+          	</div>
+          	<div class="form-group">
+          		<label>* Facial Hair Type:
+          		<input type="text" class="form-control input-lg" id="inputHairType" ng-model="vmDictator.newDictator.facial_hair" name="facialHairType" required/>
+          		<h5 class='text-danger' ng-show="addDictator.facial_hair.$invalid && addDictator.facial_hair.$dirty">Please enter the dictator's facial hair type.</h5>
+          		</label>
+          	</div>
+          	<div class="form-group">
+          		<div style="font-weight:bold;">* Is s(he) being a douche and warring on others?<br/></div>
+          		<label>
+          			<input type="radio" ng-value="true" id="atWar" ng-model="vmDictator.newDictator.at_war" name="atWar"/>
+          			Yes
+          		<label><br/>
+          		</label>
+          			<input type="radio" ng-value="false" id="atWar" ng-model="vmDictator.newDictator.at_war" name="atWar"/>
+          			No
+          			<h5 class='text-danger' ng-show="addDictator.atWar.$invalid && addDictator.atWar.$dirty">Is s(he) being a douche and warring on others?</h5>
+          		</label><br/>
+          		<p>* = Required field.</p>
+          	</div>
+          	<div class="form-group">
+          		<div class="col-sm-3">
+                <div class="pull-right">
+          			<button class="btn btn-success pull-right" type="submit" ng-disabled="addDictator.$invalid" ng-click="addDictator">Add</button>
+                </div>
+          		</div>
+          		<p>{{vmDictator.status}}</p>
+          	</div>
+          </form>
+        </div>
+    </div>
+</div>
 
