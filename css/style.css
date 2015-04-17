@@ -15,6 +15,15 @@
 #wrong {
   color: red;
 }
+
 .button-farm button {
   margin-left: 7px;
+}
+
+#underline {
+  text-decoration: underline;
+}
+
+#specialspecial {
+  color: blue;
 }
