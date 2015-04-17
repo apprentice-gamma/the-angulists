@@ -25,8 +25,6 @@
             });
         };
         factory.addDictator = function(dictator) {
-            console.log("yo");
-            console.log(dictator);
             $http.post(url, dictator).success(function() {
               factory.dictators.push(dictator);
               console.log("Dictator Added!");
@@ -55,6 +53,7 @@
               factory.hairCount[factory.dictatorsAtWarAndHairType[dictator_name]] += 1;
             }
           }
+          console.log(factory.hairtypes);
         }
 
         function determineWinner() {
