@@ -58,3 +58,13 @@ header span{
 #specialspecial {
   color: purple;
 }
+
+#guess-text {
+  font-style: bold;
+  font-size: 1.5em;
+  color: blue;
+}
+
+#makeItRed {
+  color: red;
+}
