@@ -1,25 +1,26 @@
-<div class="main-message">
-	<p>Your guess count is: {{vmDictator.guessCount}}</p>
-	<p>{{vmDictator.message}}</p>
+<div ng-controller="DictatorController as vmDictator">
+	<div class="main-message">
+		<p>Your guess count is: {{vmDictator.guessCount}}</p>
+		<p>{{vmDictator.message}}</p>
 
-	<span class="guess-button" ng-click="vmDictator.guessCounter()">Take a guess</span>
+		<span class="guess-button" ng-click="vmDictator.guessCounter()">Take a guess</span>
+	</div>
+
+	<form name="allTheHair" role="form" ng-submit="vmDictator.checkUserChoice(vmDictator.choice)" novalidate>    
+	  <div ng-repeat="hairStyle in vmDictator.DictatorFactory.hairtypes">
+	    <div class="form-group">
+	      <label>
+	        <input type="radio" ng-value="{{hairStyle}}" ng-model="vmDictator.choice"/>
+	        {{hairStyle}}
+	      <label><br/>
+	    </div>
+	  </div>
+
+	  <div class="form-group">
+	    <div class="col-sm-12">
+	      <button class="btn btn-success pull-right" type="submit" ng-disabled="addDictator.$invalid" ng-click="addDictator">Add</button>
+	    </div>
+	    <p>{{vmDictator.status}}</p>
+	  </div>
+	</form>
 </div>
-
-<form name="allTheHair" role="form" ng-submit="vmDictator.checkUserChoice(vmDictator.choice)" novalidate>    
-  <div ng-repeat="hairStyle in vmDictator.DictatorFactory.hairtypes">
-    <div class="form-group">
-      <label>
-        <input type="radio" ng-value="{{hairStyle}}" ng-model="vmDictator.choice"/>
-        {{hairStyle}}
-      <label><br/>
-    </div>
-  </div>
-
-  <div class="form-group">
-    <div class="col-sm-12">
-      <button class="btn btn-success pull-right" type="submit" ng-disabled="addDictator.$invalid" ng-click="addDictator">Add</button>
-    </div>
-    <p>{{vmDictator.status}}</p>
-  </div>
-</form>
-
