@@ -3,9 +3,6 @@
 	font-size: 100px;
 	text-align: center;
 }
-.beard-list-radio-label:first-letter {
-    text-transform: capitalize;
-
 #result {
   font-weight: bold;
   font-size: 50px;
