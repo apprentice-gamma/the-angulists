@@ -39,6 +39,9 @@ header span{
 	width: 100%;
 	max-width: 135px;
 }
+.container-body {
+	margin-bottom: 30px;
+}
 .all-the-hair {
 	padding-top: 20px;
 }
