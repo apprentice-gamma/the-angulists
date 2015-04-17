@@ -5,10 +5,21 @@
 	<span class="guess-button" ng-click="vmDictator.guessCounter()">Take a guess</span>
 </div>
 
-<div class="dictator-list">
-	{{vmDictator.DictatorFactory.dictatorsAndHairType}} <br>
-	{{vmDictator.DictatorFactory.dictatorsAtWarAndHairType}} <br>
-	{{vmDictator.DictatorFactory.hairCount}} <br>
-  {{vmDictator.DictatorFactory.winningHairType}} <br>
-  {{vmDictator.DictatorFactory.winnerDictators}}
-</div>
+<form name="allTheHair" role="form" ng-submit="vmDictator.checkUserChoice(vmDictator.choice)" novalidate>    
+  <div ng-repeat="hairStyle in vmDictator.DictatorFactory.hairtypes">
+    <div class="form-group">
+      <label>
+        <input type="radio" ng-value="{{hairStyle}}" ng-model="vmDictator.choice"/>
+        {{hairStyle}}
+      <label><br/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-12">
+      <button class="btn btn-success pull-right" type="submit" ng-disabled="addDictator.$invalid" ng-click="addDictator">Add</button>
+    </div>
+    <p>{{vmDictator.status}}</p>
+  </div>
+</form>
+

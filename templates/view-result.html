@@ -2,7 +2,9 @@
 
 <p>The facial hair most correlated with warring dictators: {{vmDictator.DictatorFactory.winningHairType}}</p>
 <p>List of all dictators with this hairtype: </p>
+<div ng-repeat="winningDictator in vmDictator.DictatorFactory.winnerDictators">
+  <p>{{winningDictator}}</p>
+</div>
 
 
-
-<!-- add a button to add dictator -->
+<a href="#/add">Add a Dictator</a>
