@@ -3,15 +3,15 @@
 			<h3>Which facial hair type should you choose?</h3>
 			<p>The discerning dictator needs to have a face that will inspire obedience. To that end, you need to know which facial hair type has worked the best for your fellow dictators. As the old saying goes: A dynasty is built on its whiskers!</p>
 			<h4>Test your instincts</h4>
-			<p>From the list on the left, see if you can select the most popular hair type of today's most revered dictators. You have three guesses. Go!</p>
+			<p>From the list on the right, see if you can select the most popular hair type of today's most revered dictators. You have three guesses. Go!</p>
 			<div class="main-message">
 				<p>{{vmDictator.message}}</p>
 				<p>Guesses left: {{3 - vmDictator.guessCount}}</p>
 				<p>{{vmDictator.message}}</p>
 				<p ng-if="vmDictator.guessCount === 0">
-					Take a guess.</span></p>
+					Take a guess.</p>
 				<p ng-if="vmDictator.guessCount > 0">
-					Try again.</span></p>
+					Try again.</p>
 			</div>
 		</div>
 		<div class="col-md-6 column">
@@ -20,14 +20,14 @@
 			    <div class="form-group">
 			      <label class="beard-list-radio-label">
 			        <input type="radio" ng-value="'{{hairStyle}}'" ng-model="vmDictator.choice"/ name="choice" required>
-			        {{hairStyle}}
+			        &nbsp;{{hairStyle}}
 			      <label><br/>
 			    </div>
 			  </div>
 
 			  <div class="form-group">
 			    <div class="col-sm-12">
-			      <button class="btn btn-success pull-right" type="submit" ng-click="vmDictator.checkUserChoice(vmDictator.choice)">Submit</button>
+			      <button class="btn btn-success pull-left" type="submit" ng-click="vmDictator.checkUserChoice(vmDictator.choice)">Submit</button>
 			    </div>
 			  </div>
 			</form>
