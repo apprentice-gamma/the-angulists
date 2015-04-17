@@ -18,7 +18,7 @@
       // vm.winnerDictators = DictatorFactory.winnerDictators;
 
       //understand the above later
-      
+
       vm.guessCount = 0;
 
       getDictator();
@@ -41,6 +41,9 @@
       }
 
       function checkUserChoice(choice) {
+        console.log("YOOOOOOOO");
+        console.log(choice);
+        console.log("YOOOOOOOO")
         if (choice === vm.DictatorFactory.winningHairType) {
           vm.didTheyGetItRight = "RIGHT!";
           $location.path('/result'); 

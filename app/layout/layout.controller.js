@@ -1,11 +1,11 @@
 (function(){
 	angular
 		.module('dictator')
-		.controller('LayoutController', Controller);
+		.controller('LayoutController', LayoutController);
 
-    function Controller($location, DictatorFactory) {
+    function LayoutController($location, DictatorFactory) {
       var vm = this;
       vm.title = 'Layout Controller';
-    };
+    }
 
 })();

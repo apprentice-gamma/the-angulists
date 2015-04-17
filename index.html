@@ -1,25 +1,56 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charst="UTF-8">
-    <title>The Angulists!</title>
-      <link rel="stylesheet" href="./css/dictator.css">
-    
-    <!-- Angular Scripts -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Oppressive Facial Hair!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.js"></script>
+  <!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
+  <!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
+  <!--script src="js/less-1.3.3.min.js"></script-->
+  <!--append ‘#!watch’ to the browser URL, then refresh the page. -->
+  
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
 
-    <!-- Modules -->
-    <script src="./app/modules/ui-bootstrap-tpls-0.12.1.min.js"></script>
-    
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
 
-  </head>
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="img/favicon.png">
+  
+<!-- Angular Scripts -->
 
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.js"></script>
+
+  <!-- Modules -->
+  <script src="./app/modules/ui-bootstrap-tpls-0.12.1.min.js"></script>
+
+  <!-- Bootstrap scripts -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+
+</head>
 <body ng-app="dictator" ng-controller="LayoutController as vmLayout">
-  <div class="container" ng-controller="DictatorController as vmDictator">
-    <div ng-view></div> 
+<div class="container">
+  <div class="row clearfix">
+    <div class="col-md-12 column">
+      <h1 class="text-center">Welcome to Lupe's World Domination Barber Shop</h1>
+      <h3 class="text-center">We make you look so good, you'll be ready to take on the world!</h3>
+       <div ng-view></div> 
+    </div>
   </div>
+</div>
 
   <!-- Dictactor App -->
   <script src="./app/dictator.app.js"></script>

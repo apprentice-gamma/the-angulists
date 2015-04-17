@@ -1,13 +1,16 @@
-<p>You are on the result page</p>
+<div ng-controller="DictatorController as vmDictator">
+	<div class="jumbotron">
+	    <p class="text-center">Todays's Featured Fearsome Facial Hair Type is:</p>
+	    <h1 class="extreme-emphasis">
+	     THE {{vmDictator.DictatorFactory.winningHairType | uppercase}}!
+	    </h1>
+	    <p class="text-center">
+	      Yes, the {{vmDictator.DictatorFactory.winningHairType}}. The wiley and vicious {{vmDictator.DictatorFactory.winningHairType}} is the most popular choice of today's at-war dictator. Come in and get yours trimmed up to perfection today!
+	    </p>    
+	</div><!-- /jumbotron -->
+	<p>Take a look at the impressive list of world leaders that sport a {{vmDictator.DictatorFactory.winningHairType}}:</p>
+	<div ng-repeat="winningDictator in vmDictator.DictatorFactory.winnerDictators">
+	  <p>{{winningDictator}}</p>
+	</div>
+	<a href="#/add">Add a Dictator</a>
 
-<p>You got it {{vmDictator.didTheyGetItRight}}</p>
-
-<p>The facial hair most correlated with warring dictators: {{vmDictator.DictatorFactory.winningHairType}}</p>
-<p>List of all dictators with this hairtype: </p>
-<p>-------------------------------</p>
-<div ng-repeat="winningDictator in vmDictator.DictatorFactory.winnerDictators">
-  <p>{{winningDictator}}</p>
-</div>
-
-
-<a href="#/add">Add a Dictator</a>
