@@ -3,3 +3,12 @@
 	font-size: 100px;
 	text-align: center;
 }
+
+#result {
+  font-weight: bold;
+  font-size: 50px;
+}
+
+#rightorwrong {
+  font-color: red;
+}
