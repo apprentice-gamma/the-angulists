@@ -1,5 +1,5 @@
-<div ng-controller="DictatorController as vmDictator">
 	<div class="jumbotron">
+      <p>You Got It {{vmDictator.didTheyGetItRight}}</p>
 	    <p class="text-center">Todays's Featured Fearsome Facial Hair Type is:</p>
 	    <h1 class="extreme-emphasis">
 	     THE {{vmDictator.DictatorFactory.winningHairType | uppercase}}!
@@ -14,3 +14,10 @@
 	</div>
 	<a href="#/add">Add a Dictator</a>
 
+<p>------------------</p>
+{{vmDictator.DictatorFactory.hairtypes}} <br>
+{{vmDictator.DictatorFactory.dictatorsAndHairType}} <br>
+{{vmDictator.DictatorFactory.dictatorsAtWarAndHairType}} <br>
+{{vmDictator.DictatorFactory.hairCount}} <br>
+{{vmDictator.DictatorFactory.winningHairType}} <br>
+{{vmDictator.DictatorFactory.winnerDictators}}
