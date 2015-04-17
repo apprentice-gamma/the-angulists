@@ -2,7 +2,8 @@
 	<div class="main-message">
 		<p>Your guess count is: {{vmDictator.guessCount}}</p>
 		<p>{{vmDictator.message}}</p>
-
+		<p>Guesses left: {{3 - vmDictator.guessCount}}</p>
+		<p>{{vmDictator.message}}</p>
 		<span class="guess-button" ng-click="vmDictator.guessCounter()">Take a guess</span>
 	</div>
 
@@ -24,3 +25,17 @@
 	  </div>
 	</form>
 </div>
+<form name="checkUserChoice" role="form" novalidate>   
+  <p>Pick the facial hair most likely to describe a warring dictator</p> 
+  <ul id="gameList">
+    <li ng-repeat="hairStyle in vmDictator.DictatorFactory.hairtypes">
+      
+        <label>
+          <input type="radio" ng-value="'{{hairStyle}}'" ng-model="vmDictator.choice" name="choice" required/>
+          {{hairStyle}}
+        <label><br/>
+      
+    </li>
+  </ul>
+      <button type="submit" ng-click="vmDictator.checkUserChoice(vmDictator.choice)">Submit</button>
+</form>
