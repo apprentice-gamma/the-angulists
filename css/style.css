@@ -21,9 +21,13 @@
 }
 
 #underline {
-  text-decoration: underline;
+  font-size: 2.5em;
+}
+
+#overline {
+  font-size: 1.5em;
 }
 
 #specialspecial {
-  color: blue;
+  color: purple;
 }
