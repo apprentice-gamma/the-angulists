@@ -1,4 +1,3 @@
-<div ng-controller="DictatorController as vmDictator">
 	<div class="row clearfix">
 		<div class="col-md-6 column">
 			<form name="allTheHair" role="form" novalidate>    
@@ -28,5 +27,19 @@
 	</div>
 		</div>
 	</div>
-</div>
+	 
+    <div class="form-group" ng-repeat="hairStyle in vmDictator.DictatorFactory.hairtypes">
+      <label>
+        <input type="radio" ng-value="'{{hairStyle}}'" ng-model="vmDictator.choice"/ name="choice" required>
+        {{hairStyle}}
+      <label><br/>
+    </div>
+
+	  <div class="form-group">
+	    <div class="col-sm-12">
+	      <button class="btn btn-success pull-right" type="submit" ng-click="vmDictator.checkUserChoice(vmDictator.choice)">Submit</button>
+	    </div>
+	  </div>
+  </form>
+
 
