@@ -1,6 +1,6 @@
 <img align="center" src="img/angulist-logo.png" alt="The Angulists - For Duty and Humanity">
 #The Angulists: Apprentice Group Project #2
-
+##Lupe's World Domination Barber Shop
 ###Dependencies
 
 We are using the [UI Bootstrap framework](http://angular-ui.github.io/bootstrap/).
@@ -18,3 +18,5 @@ GET  single owned_household http://project2-backend.herokuapp.com/api/dictators/
 
 User
 GET/POST users http://project2-backend.herokuapp.com/api/dictators/:id/households/:id/users
+
+
