@@ -42,8 +42,8 @@
             }
           }
           for (var dictatorName in factory.dictatorsAndHairType) {
-            if (factory.dictatorsAndHairType.hasOwnProperty(dictatorName) && factory.hairtypes.indexOf(factory.dictatorsAndHairType[dictatorName]) === -1 && factory.dictatorsAndHairType[dictatorName] !== "^)") {
-                factory.hairtypes.push(factory.dictatorsAndHairType[dictatorName]);        
+            if (factory.dictatorsAndHairType.hasOwnProperty(dictatorName) && factory.hairtypes.indexOf(factory.dictatorsAndHairType[dictatorName]) === -1 && factory.dictatorsAndHairType[dictatorName].length > 3) {
+                factory.hairtypes.push(factory.dictatorsAndHairType[dictatorName]);      
             }
           }
           for (var dictator_name in factory.dictatorsAtWarAndHairType) {

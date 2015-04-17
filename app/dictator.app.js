@@ -1,4 +1,4 @@
-angular.module('dictator', ['ngRoute', 'ui.bootstrap']);
+angular.module('dictator', ['ngRoute', 'ui.bootstrap', 'dictatorFilters']);
 angular.module('dictator').config(Configuration);
 
 function Configuration($routeProvider){
