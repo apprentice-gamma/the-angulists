@@ -7,11 +7,11 @@
 		<span class="guess-button" ng-click="vmDictator.guessCounter()">Take a guess</span>
 	</div>
 
-	<form name="allTheHair" role="form" ng-submit="vmDictator.checkUserChoice(vmDictator.choice)" novalidate>    
+	<form name="allTheHair" role="form" novalidate>    
 	  <div ng-repeat="hairStyle in vmDictator.DictatorFactory.hairtypes">
 	    <div class="form-group">
 	      <label>
-	        <input type="radio" ng-value="{{hairStyle}}" ng-model="vmDictator.choice"/>
+	        <input type="radio" ng-value="'{{hairStyle}}'" ng-model="vmDictator.choice"/ name="choice" required>
 	        {{hairStyle}}
 	      <label><br/>
 	    </div>
@@ -19,23 +19,9 @@
 
 	  <div class="form-group">
 	    <div class="col-sm-12">
-	      <button class="btn btn-success pull-right" type="submit" ng-disabled="addDictator.$invalid" ng-click="addDictator">Add</button>
+	      <button class="btn btn-success pull-right" type="submit" ng-click="vmDictator.checkUserChoice(vmDictator.choice)">Submit</button>
 	    </div>
-	    <p>{{vmDictator.status}}</p>
 	  </div>
 	</form>
 </div>
-<form name="checkUserChoice" role="form" novalidate>   
-  <p>Pick the facial hair most likely to describe a warring dictator</p> 
-  <ul id="gameList">
-    <li ng-repeat="hairStyle in vmDictator.DictatorFactory.hairtypes">
-      
-        <label>
-          <input type="radio" ng-value="'{{hairStyle}}'" ng-model="vmDictator.choice" name="choice" required/>
-          {{hairStyle}}
-        <label><br/>
-      
-    </li>
-  </ul>
-      <button type="submit" ng-click="vmDictator.checkUserChoice(vmDictator.choice)">Submit</button>
-</form>
+
