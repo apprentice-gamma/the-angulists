@@ -9,6 +9,10 @@
   font-size: 50px;
 }
 
-#rightorwrong {
-  font-color: red;
+#right {
+  color: green;
+}
+
+#wrong {
+  color: red;
 }

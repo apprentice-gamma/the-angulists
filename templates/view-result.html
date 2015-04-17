@@ -1,5 +1,12 @@
 	<div class="jumbotron">
-      <p class="text-center" id="result">You Got It <span id="rightorwrong">{{vmDictator.didTheyGetItRight}}</span></p>
+  
+      <div ng-if="vmDictator.didTheyGetItRight === true">
+        <p class="text-center" id="result">You Got It <span id="right">RIGHT!</span></p>
+      </div>
+      <div ng-if="vmDictator.didTheyGetItWrong === false">
+        <p class="text-center" id="result">You Got It <span id="wrong">WRONG!</span></p>
+      </div>
+
 	    <p class="text-center">Todays's Featured Fearsome Facial Hair Type is:</p>
 	    <h1 class="extreme-emphasis">
 	     THE {{vmDictator.DictatorFactory.winningHairType | uppercase}}!

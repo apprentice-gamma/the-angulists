@@ -8,6 +8,7 @@
       vm.addDictator = addDictator;
       vm.checkUserChoice = checkUserChoice;
       vm.didTheyGetItRight; 
+      vm.didTheyGetItWrong;
 
       vm.DictatorFactory = DictatorFactory; 
       // vm.hairtypes = DictatorFactory.hairtypes;
@@ -41,18 +42,15 @@
       }
 
       function checkUserChoice(choice) {
-        console.log("YOOOOOOOO");
-        console.log(choice);
-        console.log("YOOOOOOOO")
         if (choice === vm.DictatorFactory.winningHairType) {
-          vm.didTheyGetItRight = "RIGHT!";
+          vm.didTheyGetItRight = true;
           $location.path('/result'); 
         } else {
           if (vm.guessCount < 2) {
             vm.guessCount++;
           } else {
             vm.guessCount = 0;
-            vm.didTheyGetItRight = "WRONG!";
+            vm.didTheyGetItWrong = true;
             $location.path('/result');
           }
         }
