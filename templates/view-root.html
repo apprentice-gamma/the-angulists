@@ -18,7 +18,7 @@
 			<form name="allTheHair" role="form" novalidate>
 			  <div ng-repeat="hairStyle in vmDictator.DictatorFactory.hairtypes">
 			    <div class="form-group">
-			      <label>
+			      <label class="beard-list-radio-label">
 			        <input type="radio" ng-value="'{{hairStyle}}'" ng-model="vmDictator.choice"/ name="choice" required>
 			        {{hairStyle}}
 			      <label><br/>
