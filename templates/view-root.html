@@ -1,5 +1,18 @@
 	<div class="row clearfix">
 		<div class="col-md-6 column">
+			<h3>Which facial hair type should you choose?</h3>
+			<p>The discerning dictator needs to have a face that will inspire obedience. To that end, you need to know which facial hair type has worked the best for your fellow dictators. As the old saying goes: A dynasty is built on its whiskers!</p>
+			<h4>Test your instincts</h4>
+			<p>From the list on the left, see if you can select the most popular hair type of todays most revered dictators. You have three guesses. Go!</p>
+			<div class="main-message">
+				<p>Your guess count is: {{vmDictator.guessCount}}</p>
+				<p>{{vmDictator.message}}</p>
+				<p>Guesses left: {{3 - vmDictator.guessCount}}</p>
+				<p>{{vmDictator.message}}</p>
+				<span class="guess-button" ng-click="vmDictator.guessCounter()">Take a guess</span>
+			</div>
+		</div>
+		<div class="col-md-6 column">
 			<form name="allTheHair" role="form" novalidate>    
 			  <div ng-repeat="hairStyle in vmDictator.DictatorFactory.hairtypes">
 			    <div class="form-group">
@@ -16,15 +29,6 @@
 			    </div>
 			  </div>
 			</form>
-		</div>
-		<div class="col-md-6 column">
-			<div class="main-message">
-				<p>Your guess count is: {{vmDictator.guessCount}}</p>
-				<p>{{vmDictator.message}}</p>
-				<p>Guesses left: {{3 - vmDictator.guessCount}}</p>
-				<p>{{vmDictator.message}}</p>
-				<span>Take a guess</span>
-			</div>
 		</div>
 	</div>
 
