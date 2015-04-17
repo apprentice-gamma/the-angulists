@@ -53,7 +53,6 @@
               factory.hairCount[factory.dictatorsAtWarAndHairType[dictator_name]] += 1;
             }
           }
-          console.log(factory.hairtypes);
         }
 
         function determineWinner() {

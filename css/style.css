@@ -5,4 +5,16 @@
 }
 .beard-list-radio-label:first-letter {
     text-transform: capitalize;
+
+#result {
+  font-weight: bold;
+  font-size: 50px;
+}
+
+#right {
+  color: green;
+}
+
+#wrong {
+  color: red;
 }
