@@ -43,11 +43,20 @@
 </head>
 <body ng-app="dictator" ng-controller="LayoutController as vmLayout">
 <div ng-controller="DictatorController as vmDictator">
+<header class="container-fluid">
+  <div class="container">
+    <div class="col-md-2 column">
+      <a class="header-logo" href="#/"><img src="./img/logo-lupes.png"></a>
+    </div>
+    <div class="col-md-10 column">
+      <h1>Lupe's World Domination Barber Shop</h1>
+      <span>We make you look so good, you'll be ready to take on the world!</span>
+    </div>
+  </div>
+</header>
 <div class="container">
   <div class="row clearfix">
     <div class="col-md-12 column">
-      <h1 class="text-center">Lupe's World Domination Barber Shop</h1>
-      <h3 class="text-center">We make you look so good, you'll be ready to take on the world!</h3>
        <div ng-view></div> 
     </div>
   </div>
